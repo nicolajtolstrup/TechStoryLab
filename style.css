@@ -1,0 +1,259 @@
+header {
+    background-color: #EA4E43; /* KEA Rød */
+    color: rgb(0, 0, 0); /* Tekstfarve */
+    padding: 3rem;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    text-decoration: none; /* Fjern understregning */
+    color: rgb(0, 0, 0); /* Bevar hvid tekst */
+    font-family: 'Kadwa', serif; /* Font til header */
+    font-size: 2rem; /* Større tekst */
+    font-weight: bold;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100vh; /* 100% af viewportens højde */
+    overflow: hidden; /* Skjuler alt, der går udenfor containeren */
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 100%;  /* Billedet fylder hele bredden */
+    height: 100%; /* Billedet fylder hele højden */
+    object-fit: cover; /* Sørger for at billedet ikke bliver forvrænget */
+  }
+
+ @media (max-width: 400px) {
+  .hero-image img, .hero-image {
+    height: 60vh; /* Reducer højden på små skærme */
+  }
+}
+
+
+body {
+    background-color: #212338; /* Dyb blå farve */
+    color: #fff; /* Sørger for at teksten står i hvid for god kontrast */
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories {
+    margin: 5rem 0; /* Ekstra luft for kategori-sektionen */
+  }
+
+/* H1 - Udstyr overskrift */
+.categories h1 {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Container for de fire billeder */
+  .category-boxes {
+    display: flex;
+    justify-content: space-between; /* Sørger for ligelig afstand på desktop */
+    flex-wrap: wrap; /* Gør at billederne kan brydes til næste række på små skærme */
+    gap: 2rem; /* Afstand mellem billederne */
+    padding: 0 1rem;
+  }
+  
+  /* Stil for hver kategori-billede */
+  .category {
+    position: relative;
+    width: calc(25% - 2rem); /* Hver billede tager 25% af bredden */
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden; /* Sørger for at billederne ikke går udenfor kassen */
+    transition: transform 0.3s ease; /* Gør at billederne får en smooth zoom effekt */
+  }
+  
+
+  
+  /* Billede */
+  .category img {
+    width: 100%; /* Billedet fylder hele kassen */
+    height: auto; /* Sørger for at billedet bevarer sin højde-bredde proportion */
+    border-radius: 8px; /* Rundede hjørner på billedet */
+  }
+  
+  /* H2 - Kategori navn under billedet */
+  .category h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #ffffff; /* Mørk tekst */
+  }
+  
+  /* På tablets og små skærme */
+  @media (max-width: 768px) {
+    .category {
+      width: calc(50% - 1rem); /* To billeder pr. række */
+    }
+  }
+  
+  /* På mobilskærme */
+  @media (max-width: 480px) {
+    .category {
+      width: 100%; /* Et billede pr. række */
+    }
+  }
+  
+  .videosektion {
+    display: flex; /* Aktiverer flexbox */
+    justify-content: center; /* Centrerer billedet vandret */
+    align-items: center; /* Centrerer billedet lodret */
+    height: 100vh; /* Gør sektionen lige så høj som hele skærmen */
+    margin: 0 auto; /* Sikrer at der ikke er uønsket margener */
+  }
+  
+  /* Billedets størrelse */
+  .videosektion img {
+    max-width: 80%; /* Billedet fylder maks 80% af bredden */
+    height: auto; /* Bevarer billedets proportioner */
+    border-radius: 8px; /* Giver billedet lidt rundede hjørner */
+  }
+
+ @media (max-width: 600px) {
+  .videosektion img, .videosektion {
+    height: 60vh; /* Reducer højden på små skærme */
+  }
+}
+
+/* Container for produktets layout */
+.product-view {
+    margin: 7rem 0; /* Mere luft mellem headeren og footeren */
+    padding: 0 1rem;
+  }
+  
+  .product-container {
+    display: flex;
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    gap: 2rem;
+    align-items: center; /* Sørger for at billede og tekst flugter vertikalt */
+    max-width: 1200px; /* Begrænser bredden på containeren */
+    margin: 0 auto; /* Centrerer containeren på skærmen */
+  }
+  
+  /* Stil for produktbilledet */
+  .product-image img {
+    width: 100%;
+    max-width: 500px; /* Begrænser billedstørrelsen */
+    height: auto;
+    border-radius: 8px; /* Rundede hjørner på billedet */
+    object-fit: cover; /* Sørger for at billedet fylder containeren uden at forvrænge */
+  }
+  
+  /* Produktinformation til højre */
+  .product-info {
+    max-width: 500px;
+    text-align: center; /* Centrerer teksten */
+  }
+  
+  .product-info h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .product-info .product-description {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-top: 1rem; /* Mere luft under overskriften */
+  }
+  
+  /* Responsivitet - på tablets og små skærme */
+  @media (max-width: 768px) {
+    .product-container {
+      flex-direction: column; /* Billede og tekst stables vertikalt på små skærme */
+      align-items: center; /* Centrerer indholdet */
+    }
+  
+    .product-image img {
+      max-width: 100%; /* Billedet fylder hele bredden på små skærme */
+    }
+  
+    .product-info {
+      text-align: center; /* Centrerer teksten på små skærme */
+    }
+  }
+  
+  
+
+
+  .footer {
+    display: flex; /* Placerer tekstblokkene på én række */
+    justify-content: space-around; /* Lige afstand mellem tekstblokke */
+    align-items: flex-start; /* Tilpasser overskrifter og lister øverst */
+    background-color: #EA4E43; /* Baggrundsfarve i dyb blå */
+    color: #000000; /* Hvid tekst for god kontrast */
+    padding: 2rem; /* Indvendig afstand */
+    flex-wrap: wrap; /* Sørger for, at blokke tilpasser sig mobil */
+  }
+  
+  /* Individuelle tekstblokke */
+  .footer-section {
+    width: 22%; /* Hver tekstblok fylder ca. 1/4 af bredden */
+    min-width: 200px; /* Sikrer god læsbarhed på små skærme */
+  }
+  
+  /* Overskrifter i footer */
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Kadwa', serif; /* Overskriftfont */
+  }
+  
+  /* Lister i footer */
+  .footer-section ul {
+    list-style: none; /* Fjern punkttegn */
+    padding: 0; /* Fjern standardindrykning */
+    margin: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem; /* Lidt luft mellem listeelementer */
+    font-family: 'Jost', sans-serif; /* Brødtekstfont */
+  }
+
+  .equipment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.equipment-item {
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.equipment-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.equipment-item p {
+    font-size: 14px;
+    color: #555;
+}
